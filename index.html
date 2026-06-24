@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Cloud Generator — Free Online Word Cloud Maker | Word Cloud Art</title>
+<meta name="description" content="Create beautiful word clouds free, right in your browser. Paste text or set custom word weights, pick a shape, color palette and font, then export as PNG or SVG. No sign-up, no watermark.">
+<meta name="keywords" content="word cloud generator, word cloud maker, free word cloud generator, online word cloud maker, tag cloud generator, text cloud maker, word art generator">
+<link rel="canonical" href="https://wordcloudart.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wordcloudart.github.io/">
+<meta property="og:title" content="Word Cloud Generator — Free Online Word Cloud Maker">
+<meta property="og:description" content="Turn any text into a beautiful word cloud. Customize shape, color, font and weight, then export as PNG or SVG — free, no sign-up.">
+<meta property="og:image" content="https://wordcloudart.github.io/assets/og-image.png">
+<meta property="og:site_name" content="Word Cloud Art">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wordcloudart.github.io/">
+<meta name="twitter:title" content="Word Cloud Generator — Free Online Word Cloud Maker">
+<meta name="twitter:description" content="Turn any text into a beautiful word cloud. Customize shape, color, font and weight, then export as PNG or SVG — free, no sign-up.">
+<meta name="twitter:image" content="https://wordcloudart.github.io/assets/og-image.png">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1B1B2F">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Schema.org: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Cloud Art",
+  "url": "https://wordcloudart.github.io/",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "description": "A free online word cloud generator. Paste text or enter custom word weights, choose a shape, color palette and font, then export your word cloud as PNG or SVG.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Automatic word frequency detection from pasted text",
+    "Manual word weight customization",
+    "Shape masking: circle, heart, star, cloud, diamond, triangle, rectangle",
+    "Six built-in color palettes",
+    "Five font style options",
+    "Adjustable font size range and word spacing",
+    "Word rotation control",
+    "Custom background color",
+    "PNG and SVG export",
+    "Stopword filtering",
+    "Local browser storage, no account required"
+  ]
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wordcloudart.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Word Cloud Generator",
+      "item": "https://wordcloudart.github.io/#app"
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this word cloud generator really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Word Cloud Art is completely free with no sign-up, no watermark, and no usage limit. Every word cloud you make runs in your own browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my text get uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All processing happens locally in your browser using JavaScript and the Canvas API. Your text and the images you generate never leave your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I control how big each word appears?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Switch to manual weight mode to type each word and assign it a custom weight, or stay in automatic mode and let the tool size words by how often they appear in your pasted text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What file formats can I export my word cloud in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can export as a high-resolution PNG image for instant sharing or printing, or as a scalable SVG file for further editing in design software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I shape my word cloud into something other than a rectangle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose from circle, heart, star, cloud, diamond, triangle, or classic rectangle layouts, and your words will arrange themselves inside that outline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will common words like 'the' and 'and' clutter my cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not unless you want them to. Stopword filtering is on by default and automatically excludes common filler words so your cloud highlights the terms that actually matter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install anything to use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No installation is required. Word Cloud Art runs entirely in your web browser on desktop, tablet, or mobile."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a href="#app" class="skip-link">Skip to word cloud generator</a>
+
+<div id="site-header-root"></div>
+
+<main id="main-content">
+
+  <!-- ============ HERO (Section 1) ============ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-top">
+        <span class="eyebrow">Free &middot; Browser-based &middot; No sign-up</span>
+        <h1>Turn any text into a <span class="accent">word cloud</span> that actually <span class="accent2">looks designed</span>.</h1>
+        <p class="hero-sub">Paste an essay, a speech, or a list of keywords. Word Cloud Art weighs every word, arranges it by hand-tuned spiral logic, and lets you shape, color, and export the result in seconds.</p>
+        <div class="hero-cta-row">
+          <a href="#app" class="btn btn-primary">Open the Generator</a>
+          <a href="#how-it-works" class="btn btn-ghost-light">See How It Works</a>
+        </div>
+      </div>
+
+      <div class="hero-cloud-wrap" aria-hidden="true">
+        <svg id="hero-cloud-svg" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <div class="hero-word-strip">
+        <span>circle</span><span>heart</span><span>star</span><span>cloud</span><span>diamond</span><span>PNG</span><span>SVG</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APP / WORKSPACE (Section 2) ============ -->
+  <section class="app-section" id="app">
+    <div class="container">
+      <div class="app-shell reveal">
+        <div class="app-shell-top">
+          <div class="app-dots"><span></span><span></span><span></span></div>
+          <span class="app-shell-label">word-cloud-generator.app</span>
+          <div class="app-shell-actions">
+            <button class="btn btn-ghost btn-sm" id="shuffle-colors-btn" type="button">🎲 Shuffle Palette</button>
+            <button class="btn btn-ghost btn-sm" id="clear-btn" type="button">Clear</button>
+            <button class="btn btn-primary btn-sm" id="generate-btn" type="button">Generate Cloud</button>
+          </div>
+        </div>
+
+        <div class="app-body">
+          <!-- Controls -->
+          <div class="app-controls">
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <span class="control-label">Word Source</span>
+              </div>
+              <div style="display:flex; gap:16px; font-size:0.88rem; margin-bottom:14px;">
+                <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                  <input type="radio" name="mode" id="mode-auto" checked> Auto from text
+                </label>
+                <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                  <input type="radio" name="mode" id="mode-manual"> Manual weights
+                </label>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="word-input">Your Text</label>
+              <textarea id="word-input" placeholder="Paste your text, article, speech, or list of keywords here…" aria-describedby="word-input-hint"></textarea>
+              <p class="input-hint" id="word-input-hint">Word size is based on how often each word appears.</p>
+            </div>
+
+            <div class="control-group" id="manual-weight-panel" style="display:none;">
+              <div class="control-label-row">
+                <span class="control-label">Words &amp; Weights</span>
+                <button class="btn btn-ghost btn-sm" id="add-word-btn" type="button">+ Add</button>
+              </div>
+              <div class="weight-list" id="weight-list"></div>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="control-group">
+              <span class="control-label">Shape</span>
+              <div class="shape-grid" id="shape-grid"></div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">Color Palette</span>
+              <div class="swatch-row" id="swatch-row"></div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="font-select">Font Style</label>
+              <select class="ctrl-select" id="font-select">
+                <option value="fraunces">Fraunces (Serif Display)</option>
+                <option value="inter">Inter (Clean Sans)</option>
+                <option value="mono">JetBrains Mono (Monospace)</option>
+                <option value="impact">Impact (Bold Headline)</option>
+                <option value="georgia">Georgia (Classic Serif)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label class="control-label" for="max-font-slider">Max Word Size</label>
+                <span class="control-value" id="max-font-value">90px</span>
+              </div>
+              <input type="range" id="max-font-slider" min="40" max="160" value="90">
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label class="control-label" for="min-font-slider">Min Word Size</label>
+                <span class="control-value" id="min-font-value">12px</span>
+              </div>
+              <input type="range" id="min-font-slider" min="8" max="40" value="12">
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label class="control-label" for="spacing-slider">Word Spacing</label>
+                <span class="control-value" id="spacing-value">2px</span>
+              </div>
+              <input type="range" id="spacing-slider" min="0" max="14" value="2">
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="bg-color-input">Background Color</label>
+              <input type="color" id="bg-color-input" value="#F7F3E9" style="width:100%; height:38px; border-radius:8px; border:1.5px solid var(--border-on-paper); cursor:pointer; margin-top:4px;">
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="toggle-row">
+              <span class="control-label">Rotate Some Words</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="rotate-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="toggle-row">
+              <span class="control-label">Filter Stopwords</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="stopwords-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="toggle-row">
+              <span class="control-label">Case Sensitive</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="case-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Stage -->
+          <div class="app-stage">
+            <div id="cloud-canvas-wrap">
+              <canvas id="wordcloud-canvas" width="800" height="800" aria-label="Generated word cloud" role="img"></canvas>
+              <div class="stage-empty" id="stage-empty-state" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17a4 4 0 01-1-7.9A4.5 4.5 0 0114.5 7a3.5 3.5 0 014.4 4.4A3.5 3.5 0 0118 17H7z"/></svg>
+                <h4>Nothing here yet</h4>
+                <p>Paste some text or add manual words, then click Generate Cloud.</p>
+              </div>
+              <div class="stage-loading" id="stage-loading-state"><span class="spinner"></span> Arranging words…</div>
+            </div>
+
+            <div class="stage-footer-bar">
+              <div class="stage-stats">
+                <span><strong id="stat-word-count">0</strong> unique words</span>
+                <span><strong id="stat-unique-count">0</strong></span>
+              </div>
+              <div class="zoom-controls">
+                <button class="zoom-btn" id="zoom-out-btn" aria-label="Zoom out" type="button">−</button>
+                <button class="zoom-btn" id="zoom-reset-btn" aria-label="Reset zoom" type="button">⟲</button>
+                <button class="zoom-btn" id="zoom-in-btn" aria-label="Zoom in" type="button">+</button>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <button class="btn btn-ghost btn-sm" id="download-svg-btn" type="button">Export SVG</button>
+                <button class="btn btn-primary btn-sm" id="download-png-btn" type="button">Download PNG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES (Section 3) ============ -->
+  <section class="section-pad" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Features</span>
+        <h2>A word cloud maker built for control, not just decoration</h2>
+        <p>Most free word cloud generators give you one font and one shape. This one gives you a real design surface: weight, shape, palette, type, and spacing all in your hands.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(255,107,94,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B5E" stroke-width="2" stroke-linecap="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+          </div>
+          <h3>Automatic word weighting</h3>
+          <p>Paste any block of text and the generator counts word frequency for you, sizing each word by how often it actually appears.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(78,205,196,0.14);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2FA39A" stroke-width="2" stroke-linecap="round"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          </div>
+          <h3>Manual weight override</h3>
+          <p>Want precise control instead? Switch to manual mode and type each word with its own custom importance score.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(255,210,63,0.18);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C99A1F" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3>Seven shape masks</h3>
+          <p>Pour your words into a circle, heart, star, cloud, diamond, triangle, or a clean rectangle — the layout respects every outline.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(255,107,94,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FF6B5E" stroke-width="2" stroke-linecap="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2.5"/><circle cx="6" cy="17" r="2.5"/></svg>
+          </div>
+          <h3>Six color palettes</h3>
+          <p>Sunset, lagoon, ink, meadow, candy, and monochrome — each tuned as a real palette, not random hues, plus a one-click shuffle.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(78,205,196,0.14);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2FA39A" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+          </div>
+          <h3>Five font styles</h3>
+          <p>From a serif display face to a clean monospace, choose a typeface that matches the tone of your subject.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:rgba(255,210,63,0.18);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C99A1F" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+          </div>
+          <h3>PNG &amp; SVG export</h3>
+          <p>Download a high-resolution PNG for sharing instantly, or a scalable SVG you can keep editing in your own design tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (Section 4) ============ -->
+  <section class="section-pad on-ink" id="how-it-works" style="background:var(--ink); color:var(--paper-text);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" style="color:var(--gold);">How It Works</span>
+        <h2 style="color:var(--paper-text);">From plain text to finished word cloud in four steps</h2>
+        <p>No tutorials needed. The whole flow happens on one screen.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-item reveal">
+          <span class="step-num">01</span>
+          <h3 style="color:var(--paper-text);">Add your words</h3>
+          <p>Paste any text and let it auto-weigh by frequency, or switch to manual mode and type your own words with custom weights.</p>
+        </div>
+        <div class="step-item reveal">
+          <span class="step-num">02</span>
+          <h3 style="color:var(--paper-text);">Pick a shape &amp; palette</h3>
+          <p>Choose from seven shape outlines and six curated color palettes — or shuffle until something clicks.</p>
+        </div>
+        <div class="step-item reveal">
+          <span class="step-num">03</span>
+          <h3 style="color:var(--paper-text);">Fine-tune the layout</h3>
+          <p>Adjust font, size range, spacing, rotation, and background color, watching the cloud update live.</p>
+        </div>
+        <div class="step-item reveal">
+          <span class="step-num">04</span>
+          <h3 style="color:var(--paper-text);">Export &amp; use it</h3>
+          <p>Download as PNG for instant use, or SVG if you want to keep editing the shapes and text afterward.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ USE CASES (Section 5) ============ -->
+  <section class="section-pad" id="use-cases">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Use Cases</span>
+        <h2>Built for classrooms, decks, and everything between</h2>
+        <p>A word cloud generator earns its place when the words themselves are the message. Here's where that shows up most.</p>
+      </div>
+
+      <div class="usecase-grid">
+        <div class="usecase-card reveal">
+          <div>
+            <span class="usecase-tag">Education</span>
+            <h4>Classroom &amp; lesson visuals</h4>
+          </div>
+          <p>Turn a vocabulary list, a poem, or student feedback into a visual anchor for a lesson or bulletin board.</p>
+        </div>
+        <div class="usecase-card reveal">
+          <div>
+            <span class="usecase-tag">Business</span>
+            <h4>Presentations &amp; reports</h4>
+          </div>
+          <p>Summarize survey responses, meeting transcripts, or brand keywords into one slide that reads at a glance.</p>
+        </div>
+        <div class="usecase-card reveal">
+          <div>
+            <span class="usecase-tag">Personal</span>
+            <h4>Gifts &amp; keepsakes</h4>
+          </div>
+          <p>Shape a wedding speech, a eulogy, or years of text messages into a heart or star you can print and frame.</p>
+        </div>
+        <div class="usecase-card reveal">
+          <div>
+            <span class="usecase-tag">Marketing</span>
+            <h4>Social &amp; content previews</h4>
+          </div>
+          <p>Pull the recurring themes out of a blog post or campaign brief and turn them into a shareable graphic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY WORD CLOUDS / COMPARISON (Section 6) ============ -->
+  <section class="section-pad" id="why" style="background:var(--paper-dim);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why This Tool</span>
+        <h2>What a good word cloud generator should actually do</h2>
+        <p>Word clouds get a reputation for being a lazy visual. The difference is almost always in the tooling.</p>
+      </div>
+
+      <div class="compare-table-wrap reveal">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>Word Cloud Art</th>
+              <th>Typical free generator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Custom shape masking</td>
+              <td class="check-yes">7 shapes</td>
+              <td class="check-no">Rectangle only</td>
+            </tr>
+            <tr>
+              <td>Manual word weighting</td>
+              <td class="check-yes">Yes, per word</td>
+              <td class="check-no">Frequency only</td>
+            </tr>
+            <tr>
+              <td>Color palette choice</td>
+              <td class="check-yes">6 curated palettes</td>
+              <td class="check-no">Random colors</td>
+            </tr>
+            <tr>
+              <td>Export formats</td>
+              <td class="check-yes">PNG and SVG</td>
+              <td class="check-no">PNG only, often watermarked</td>
+            </tr>
+            <tr>
+              <td>Account required</td>
+              <td class="check-yes">No</td>
+              <td class="check-no">Often yes</td>
+            </tr>
+            <tr>
+              <td>Data leaves your device</td>
+              <td class="check-yes">Never</td>
+              <td class="check-no">Frequently uploaded</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIPS / GUIDE (Section 7) ============ -->
+  <section class="section-pad" id="guide">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Guide</span>
+        <h2>Tips for a word cloud that's worth sharing</h2>
+        <p>A few small choices separate a cluttered cloud from one people actually want to look at.</p>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Filter stopwords first</h4>
+            <p>Leave stopword filtering on so "the," "and," and "to" don't dominate words that actually matter.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Match the shape to the message</h4>
+            <p>A heart for a love letter, a star for an achievement, a cloud for a brainstorm — the outline can carry meaning too.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Keep your palette to one mood</h4>
+            <p>Sunset and candy read playful; ink and monochrome read serious. Pick the palette that matches your context, not just your favorite color.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Widen the size range for fewer words</h4>
+            <p>If you only have ten or so words, push the max font size up and the min down — it fills the shape more confidently.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Use manual mode for branded terms</h4>
+            <p>If a product name should dominate regardless of how often it's mentioned, manual weighting is the more reliable choice.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">”</span>
+          <div>
+            <h4>Export SVG for print</h4>
+            <p>SVG stays crisp at any size, which matters if you're printing a poster or putting the cloud on a large canvas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GLOSSARY (Section 8) ============ -->
+  <section class="section-pad" id="glossary" style="background:var(--paper-dim);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Glossary</span>
+        <h2>Word cloud terms, in plain language</h2>
+        <p>A quick reference if any of the controls feel unfamiliar.</p>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card reveal">
+          <span class="tip-mark">§</span>
+          <div>
+            <h4>Word weight</h4>
+            <p>A number that decides how large a word appears. Higher weight, bigger word.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">§</span>
+          <div>
+            <h4>Stopwords</h4>
+            <p>Common connective words like "the," "is," and "of" that carry little meaning on their own.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">§</span>
+          <div>
+            <h4>Shape mask</h4>
+            <p>An outline — like a heart or star — that constrains where words are allowed to be placed.</p>
+          </div>
+        </div>
+        <div class="tip-card reveal">
+          <span class="tip-mark">§</span>
+          <div>
+            <h4>Spiral placement</h4>
+            <p>The layout method that positions each word by walking outward from the center until it finds open space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (Section 9) ============ -->
+  <section class="section-pad" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common questions about the word cloud generator</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">Is this word cloud generator really free?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Word Cloud Art is completely free with no sign-up, no watermark, and no usage limit. Every word cloud you make runs in your own browser.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does my text get uploaded to a server?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. All processing happens locally in your browser using JavaScript and the Canvas API. Your text and the images you generate never leave your device.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I control how big each word appears?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Switch to manual weight mode to type each word and assign it a custom weight, or stay in automatic mode and let the tool size words by how often they appear in your pasted text.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What file formats can I export my word cloud in?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">You can export as a high-resolution PNG image for instant sharing or printing, or as a scalable SVG file for further editing in design software.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I shape my word cloud into something other than a rectangle?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Choose from circle, heart, star, cloud, diamond, triangle, or classic rectangle layouts, and your words will arrange themselves inside that outline.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will common words like "the" and "and" clutter my cloud?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Not unless you want them to. Stopword filtering is on by default and automatically excludes common filler words so your cloud highlights the terms that actually matter.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do I need to install anything to use this tool?<span class="faq-icon"></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No installation is required. Word Cloud Art runs entirely in your web browser on desktop, tablet, or mobile.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND (Section 10) ============ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Your words are ready to become something worth looking at.</h2>
+        <p>No account, no watermark, no waiting. Just paste, shape, and export.</p>
+        <div class="hero-cta-row">
+          <a href="#app" class="btn btn-primary">Open the Generator</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MORE APPS (Section 11) ============ -->
+  <section class="section-pad" id="more-apps" style="background:var(--paper-dim);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">More Free Tools</span>
+        <h2>Other browser-based apps worth a look</h2>
+        <p>Free, fast, and built the same way — no accounts, no clutter.</p>
+      </div>
+
+      <div class="more-apps-grid" id="more-apps-grid">
+        <!-- Populated by js/more-apps.js from featured-apps.txt -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer-root"></div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+<script src="js/hero-cloud.js"></script>
+<script src="js/wordcloud-engine.js"></script>
+<script src="js/app.js"></script>
+<script src="js/more-apps.js"></script>
+
+</body>
+</html>
